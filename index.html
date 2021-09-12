@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head><script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script></head>
+    <body>
+        <a-scene>
+            <a-assets timeout="1000">
+                <a-asset-item src="./bench/scene.gltf" id="bench"></a-asset-item>
+                <a-asset-item src="./cat/scene.gltf" id="cat"></a-asset-item>
+                <a-asset-item src="./street_lamp/scene.gltf" id="lamp"></a-asset-item>
+                <a-asset-item src="./girl/scene.gltf" id="girl"></a-asset-item>
+            </a-assets>
+            <a-entity>
+                <a-entity position="-40 -25 0" rotation="0 0 0" scale="0.05 0.05 0.05" gltf-model="#lamp" shadow="cast:true"></a-entity>
+                <a-entity position="0 -17 0" rotation="0 0 0" scale="20 20 20" gltf-model="#bench" shadow="cast:true"></a-entity>
+                <a-entity position="-8 -25 12" rotation="0 0 0" scale="0.17 0.17 0.17" gltf-model="#girl" shadow="cast:true"></a-entity>
+                <a-entity position="7 -25 12" rotation="0 0 0" scale="0.02 0.02 0.02" gltf-model="#cat" shadow="cast:true"></a-entity>
+                <a-plane color="#19215b" position="0 0 -9.8" rotation="0 0 0" width="200" height="200"></a-plane>
+            </a-entity>
+        </a-scene>
+    </body>    
+</html>
